@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>Palmettodevs.com</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+  <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+  <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+  <!-- <link rel="import" href="bower_components/font-roboto/roboto.html"> -->
+  <link rel="import" href="bower_components/paper-button/paper-button.html">
+  <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+  
+  <!-- adding in b/c the tutorial mentions it  -->
+  <script src="bower_components/platform/platform.js"></script>
+  <link rel="import" href="bower_components/google-map/google-map.html">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body unresolved>
+  <paper-toolbar>
+    <paper-icon-button icon="menu"></paper-icon-button>
+    <span class="flex"> toolbar</span>
+    <paper-fab icon="add"></paper-fab>
+  </paper-toolbar>
+
+  <section>
+    <p>A simple Polymer
+      <a href="https://elements.polymer-project.org/browse?package=paper-elements">
+      paper elements</a> example that demonstrates using <code>&lt;paper-toolbar&gt;,
+      &lt;paper-button&gt;, &lt;paper-checkbox&gt;, &lt;paper-icon-button&gt;,
+      &lt;paper-fab&gt;, &lt;paper-tabs&gt;</code>, and <code>&lt;paper-toast&gt;</code>.
+    </p>
+    <paper-checkbox label="Got it!"></paper-checkbox>
+  </section>
+
+  <section>
+    <paper-tabs selected="0">
+      <paper-tab>My Portfolio</paper-tab>
+      <paper-tab>Concepts</paper-tab>
+      <paper-tab>Work Experience</paper-tab>
+    </paper-tabs>
+    <p>This is my website for showcasing my coding skills.
+  </section>
+
+  <section>
+    <template id="toastGroup" is="dom-bind">
+      <paper-button raised right on-click="showToast">Star Trek</paper-button>
+      <paper-toast id="toast" text="Star Trek TNG."></paper-toast>
+      
+      <google-map latitude="37.779" longitude="-122.3892" zoom="13">
+    <google-map-marker
+      latitude="37.779"
+      longitude="-122.3892"
+      title="Go Giants!"
+      draggable="true"></google-map-marker>
+  </google-map>
+    </template>
+  </section>
+
+  <script src="main.js"></script>
+  
+  
+</body>
+</html>
